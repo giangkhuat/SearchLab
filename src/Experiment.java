@@ -1,14 +1,17 @@
-import java.util.*;
+import java.util.Arrays;
+import java.util.ArrayList;
 
 public class Experiment {
 	public static void main(String[] args) throws Exception {
-		String[] tmp = new String[] { "alpha", "bravo", "charlie", "delta", "echo", "foxtrot", "golf", "hotel", "india",
+		String[] tmp1 = new String[] { "alpha", "bravo", "charlie", "delta", "echo", "foxtrot", "golf", "hotel", "india",
 				"juliett", "kilo", "lima", "mike", "november", "oscar", "papa", "quebec", "romeo", "sierra", "tango",
 				"uniform", "victor", "whiskey", "xray", "yankee", "zulu" };
-		for (int i = 0; i < tmp.length ; i++) {
-		  System.out.println(tmp[i] + " ");
+		
+		for (int i = 0; i < tmp1.length ; i++) {
+		 
+		  System.out.println(tmp1[i] + " ");
 		}
-		ArrayList<String> strings = new ArrayList<String>(Arrays.asList(tmp));
+		ArrayList<String> strings = new ArrayList<String>(Arrays.asList(tmp1));
 		// (s) -> s.length() == 6, strings) this says that for every element s in string
 		// check its length if it is == 6
 		// it does not work if we do 

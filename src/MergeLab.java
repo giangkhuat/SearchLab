@@ -1,6 +1,7 @@
 import java.util.ArrayList;
+
 import java.util.*;
-public class MergeLab {
+public class MergeLab <T>{
 	/**
 	 * Merge the values from positions [lo..mid) and [mid..hi) back into
 	 * the same part of the array.
@@ -8,7 +9,7 @@ public class MergeLab {
 	 * Preconditions: Each subarray is sorted accorting to comparator.
 	 */
 	static <T> void merge(ArrayList<T> vals, int lo, int mid, int hi, Comparator<? super T> comparator) {
-	   ArrayList<T> tempArray = new ArrayList<T>();
+	   ArrayList<T> tempArray = vals;
 	   int i = lo, j = mid;
 	   int k = 0;
 	   while (i < mid && j < hi) {
@@ -60,6 +61,16 @@ public class MergeLab {
 	     MergeLab.mergeSortHelper(vals, 0, vals.size(), comparator );
 	}
 
-	
+	public static void main (String[] args) throws Exception {
+	  ArrayList<String> str = new ArrayList<String>();
+	  str.add("hello");
+	  str.add("aa");
+	  str.add("bh");
+	  StringComparator comp = new StringComparator();
+	  MergeLab.mergeSort(str, comp);
+	  for (int  i = 0; i < str.size(); i++) {
+	    System.out.println(str.get(i));
+	  }
+	}
 
 }

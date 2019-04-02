@@ -1,7 +1,7 @@
 import java.util.Comparator;
 
 // taken from Sam's lab https://www.cs.grinnell.edu/~rebelsky/Courses/CSC207/2019S/02/labs/array-based-queues.html
-public class StringComparator implements Comparator<? super T> {
+public class StringComparator implements Comparator<String> {
   public int compare(String str1, String str2) {
     // Efficiency hack: If two strings occupy the same memory
     // they are equal.
@@ -14,4 +14,5 @@ public class StringComparator implements Comparator<? super T> {
     // Finally, we can use the built-in `compareTo` method.
     return str1.compareTo(str2);
   } // compare(String, STring)
+
 } // StringComparator
