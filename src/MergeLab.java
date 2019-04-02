@@ -1,6 +1,5 @@
 import java.util.ArrayList;
-import java.util.Comparator;
-
+import java.util.*;
 public class MergeLab {
 	/**
 	 * Merge the values from positions [lo..mid) and [mid..hi) back into
@@ -44,7 +43,7 @@ public class MergeLab {
 	   
 	}
 	
-	public <T> void  mergeSortHelper( ArrayList<T> sortArray, int lo, int hi, Comparator<T> comparator) {
+	public static <T> void  mergeSortHelper( ArrayList<T> sortArray, int lo, int hi, Comparator<T> comparator) {
 		// Base case
 		if ((hi - lo <= 1)) {
 			return;
@@ -57,8 +56,8 @@ public class MergeLab {
 		}
 		
 	}
-	public static <T> void mergeSort(ArrayList<T> vals, Comparator<? super T> comparator) {
-	
+	public static <T> void mergeSort(ArrayList<T> vals, Comparator<T> comparator) {
+	     MergeLab.mergeSortHelper(vals, 0, vals.size(), comparator );
 	}
 
 	
